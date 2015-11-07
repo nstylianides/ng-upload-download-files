@@ -1,0 +1,41 @@
+<form id="uploadForm"
+      enctype="multipart/form-data"
+      action="/file/upload"
+      method="post">
+    	<input type="file" name="uploadFile" />
+    	<input type="submit" value="submit"/>
+	</form>
+
+<!--
+	<div ngf-select
+		 ngf-drop
+		 ng-model="files"
+		 ngf-model-invalid="invalidFiles"
+		 ng-model-options="modelOptionsObj"
+		 ngf-multiple="multiple"
+		 ngf-pattern="pattern"
+		 accept="{{acceptSelect}}"
+		 ng-disabled="disabled"
+		 ngf-capture="capture"
+		 ngf-drag-over-class="dragOverClassObj"
+		 ngf-validate="validateObj"
+		 ngf-keep="keepDistinct ? 'distinct' : keep"
+		 ngf-allow-dir="allowDir"
+		 class="drop-box"
+		 ngf-drop-available="dropAvailable">Select File,
+		<span ng-show="dropAvailable">Drop File or Paste/Drop Image</span>
+	</div>
+-->
+<div ngf-drop="upload($file)" class="drop-box"
+	 ngf-drag-over-class="'dragover'" ngf-multiple="true"
+	 ngf-pattern="'image/*,application/pdf'">Drop Images or PDFs files here</div>
+<div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+<br>
+<button ng-click="getImage()">Load Image
+</button>
+<span>
+	<!--
+		Just point ng-src to the in memory URL
+	-->
+	<img id="animg" ng-src="{{inMemoryURL}}">
+</span>
