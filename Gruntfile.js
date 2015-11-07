@@ -44,6 +44,9 @@ module.exports = function(grunt) {
 					destination: 'docs'
 				}
 			}
+		},
+		livereload: {
+			port: 35728
 		}
 	});
 

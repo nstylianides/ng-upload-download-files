@@ -21,7 +21,7 @@ module.exports = {
 		//There are other options also .Check at skipper docs
 
 		//If dirname is not set the upload will be done to ./tmp/uploads	
-	    uploadFile.upload(/*{ dirname: '../../assets/images'},*/function onUploadComplete (err, files) {
+	    uploadFile.upload({ dirname: sails.config.globals.upload_files},function onUploadComplete (err, files) {
 	    // Files will be uploaded to /assets/images/
 	    // Access the files via localhost:1337/images/yourfilename
 

@@ -26,9 +26,22 @@
 		<span ng-show="dropAvailable">Drop File or Paste/Drop Image</span>
 	</div>
 -->
-<div ngf-drop="upload($file)" class="drop-box"
-	 ngf-drag-over-class="'dragover'" ngf-multiple="true"
-	 ngf-pattern="'image/*,application/pdf'">Drop Images or PDFs files here</div>
+<!--
+<div ngf-drop="upload($file)"
+     type="file"
+	 class="drop-box"
+	 ngf-drag-over-class="'dragover'"
+     ngf-multiple="true"
+	 ngf-pattern="'image/*,application/pdf'">Drop Images or PDFs files here or click to select</div>
+	 -->
+
+<input ngf-drop="upload($file)"
+     type="file"
+     class="drop-box"
+     ngf-drag-over-class="'dragover'"
+     ngf-multiple="true"
+     ngf-pattern="'image/*,application/pdf'"/>
+
 <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
 <br>
 <button ng-click="getImage()">Load Image
