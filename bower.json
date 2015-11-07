@@ -37,5 +37,8 @@
     "angular-smart-table": "~2.1.4",
     "ng-file-upload": "~9.1.2",
     "base64-js": "~1.0.0"
+  },
+  "resolutions": {
+    "angular": "~1.4.7"
   }
 }
